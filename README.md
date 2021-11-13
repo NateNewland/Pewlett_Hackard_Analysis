@@ -4,10 +4,13 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
 
 *A query is written and executed to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955
 The Retirement Titles table is exported as retirement_titles.csv
+ *
 *A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 The Unique Titles table is exported as unique_titles.csv
+ *
 *A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
 The Retiring Titles table is exported as retiring_titles.csv
+ *
 # Project Overview
 Wee were tasked with tracking the number of employees who can retire based on birth date by using data bases and SQL. As another objective we were meant to make a table that shoes all employees who are eligable of the Mentorship Program at Pewlett Hackard.
 ## Deliverable 1
