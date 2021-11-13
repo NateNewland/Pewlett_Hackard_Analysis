@@ -5,6 +5,14 @@ CREATE TABLE departments (
      PRIMARY KEY (dept_no),
      UNIQUE (dept_name)
 );
+CREATE TABLE titles (
+    emp_no INT NOT NULL,
+    title VARCHAR NOT NULL,
+    from_date DATE NOT NULL,
+    to_date DATE NOT NULL,
+    FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+    PRIMARY KEY (emp_no, title, from_date)
+);
 CREATE TABLE dept_manager (
 dept_no VARCHAR(4) NOT NULL,
     emp_no INT NOT NULL,
@@ -35,32 +43,32 @@ SELECT * FROM departments;
 
 SELECT first_name, last_name
 FROM employees
-WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31';
+WHERE birth_date BETWEEN '1965-01-01' AND '1965-12-31';
 
 SELECT first_name, last_name
 FROM employees
-WHERE birth_date BETWEEN '1952-01-01' AND '1952-12-31';
+WHERE birth_date BETWEEN '1965-01-01' AND '1965-12-31';
 -- Retirement eligibility
 SELECT first_name, last_name
 FROM employees
-WHERE birth_date BETWEEN '1952-01-01' AND '1955-12-31'
+WHERE birth_date BETWEEN '1965-01-01' AND '1965-12-31'
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 -- Number of employees retiring
 SELECT COUNT(first_name)
 FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 SELECT first_name, last_name
 FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 -- Create new table for retiring employees
 SELECT emp_no, first_name, last_name
 INTO retirement_info
 FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 -- Check the table
 SELECT * FROM retirement_info;
@@ -113,7 +121,7 @@ last_name,
     gender
 INTO emp_info
 FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
 SELECT e.emp_no,
@@ -128,7 +136,7 @@ INNER JOIN salaries as s
 ON (e.emp_no = s.emp_no)
 INNER JOIN dept_emp as de
 ON (e.emp_no = de.emp_no)
-WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
      AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
 	      AND (de.to_date = '9999-01-01');
 		  -- List of managers per department
