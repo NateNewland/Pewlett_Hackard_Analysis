@@ -25,3 +25,11 @@ I created tables for the people retiring by title and also preformed a Distinct 
 <img width="986" alt="Mentor_Eligiablity" src="https://user-images.githubusercontent.com/91299736/141662384-94d2c119-1e00-4e84-bda2-f0125209fcb7.PNG">
 
 With this deliverable we were asked to make a csv with the canidates who were eligable for the Mentorship Program. It must hold current employees born between January 1st, 1965 and December 31st, 1965.
+### Summary
+1) How many roles will need to be filled as the "silver tsunami" begins to make an impact?.
+
+90,398 roles are in urgent need to be filled out as soon as the workforce starts retiring at any given time.
+
+2) Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
+No, we have 1,940 employees who are eligible to participate in a mentorship program.
